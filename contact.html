@@ -1,147 +1,151 @@
-﻿Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@kucbyou 
-ValetovAA
-/
-finalsite
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-finalsite/gallery.html
-@ValetovAA
-ValetovAA final1
-Latest commit 520c52e 8 minutes ago
- History
- 1 contributor
-124 lines (115 sloc)  2.83 KB
-   
-<!doctype html>
 <html>
-<title>gallery</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <head>
 <meta charset = "UTF-8">
-
-<style>
-.navbar {
-  position: fixed;
-  top: 0%;
-  left: 5%;
-  width: 100%;
-  height:50 px;
-  background: rgba(0, 0, 0, 0.0); 
-}
-.NewYear{
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  height:50 px;
-  background: rgba(0, 0, 0, 0.0); 
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 27px;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 27px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-body { 
-   background-color: rgba(0, 0, 0, 0.9); 
-}
-
-img {
-display: block;
-margin: 10px;
-border: 1px solid green;
-padding: .5rem;
-border-radius: 1rem;
-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
-max-width: 20vw;
-}
-
-.styled-table img{
-width: 15vw;
-height: 10vw;
-}
-td{
-padding: 10px 2px 2px 5px ;
-}
-#demo {
-font-family: "Sofia", sans-serif;
-font-size: 30px;
-color: blue;
-}
-td[colspan="3"] {
-text-align: center;
-}
-</style>
-<script>
-var flag=new Array();
-window.onload = function() {
-for (var i = 0; i < document.images.length; i++) flag[i]=false;
-for (var i = 0; i < document.images.length; i++) {
-var image = document.images[i];
-image.setAttribute("index", i + "");
-image.onclick = function() {
-var index = this.getAttribute("index");
-if(!flag[index]) {document.images[index].style.border="2px solid red"; flag[index]=true;}
-else {document.images[index].style.border="1px solid green"; flag[index]=false;}
-};
-}
-};
-
-</script>
+<title>Письмо</title>
 </head>
+<header>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100px;
+            background: rgba(0, 0, 0, 0);
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding-top: 5px;
+            padding-left: 90px;
+            text-decoration: none;
+            font-size: 27px;
+        }
+        
+        .navbar b {
+            position: fixed;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        body {
+            padding-top: 100px;
+            background: rgba(0, 0, 0, 0.9);
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        body p {
+            font-style: italic;
+            font-size: 1.2em;
+            color: ghostwhite;
+            margin: 1rem;
+        }
+        
+        body p a {
+            border: 4px ridge rgba(0, 0, 0, 0);
+            border-radius: 5px;
+        }
+        
+        body p b {
+            padding-left: 100px;
+        }
+        
+        textarea {
+            outline:"color: rgba(0, 0, 0, 0)"
+        }
+    </style>
+
+
+    <div style="color: rgba(0, 0, 0, 0)">
+    </div>
+    <script>
+        function MyFunc() {
+            var name = document.forms["RegForm"]["Name"];
+            var gender = document.forms["RegForm"]["gender"];
+            var opinion = document.forms["RegForm"]["opinion"];
+            var wish1 = document.forms["RegForm"]["wish1"];
+            var wish2 = document.forms["RegForm"]["wish2"];
+            var wish3 = document.forms["RegForm"]["wish3"];
+            var dlc = document.forms["RegForm"]["dlc"];
+
+            if (name.value == "") {
+                window.alert("Fill the field.");
+                name.focus();
+                return false;
+            }
+            if (gender.value == "") {
+                window.alert("Fill the field.");
+                gender.focus();
+                return false;
+            }
+            if (opinion.value == "") {
+                window.alert("Fill the field.");
+                opinion.focus();
+                return false;
+            }
+            if (wish1.value == "") {
+                window.alert("Fill the 1st wish.");
+                wish1.focus();
+                return false;
+            }
+            if (wish2.value == "") {
+                window.alert("Fill the 2nd wish.");
+                wish2.focus();
+                return false;
+            }
+            if (wish3.value == "") {
+                window.alert("Fill the 3rd wish.");
+                wish3.focus();
+                return false;
+            }
+            if (dlc.value == "") {
+                window.alert("Fill the field.");
+                dlc.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</header>
+
 <body>
-<table class="styled-table" align="center">
-<tr>
-<td colspan="3">
-</td>
-</tr>
-<tr>
-<td ><img src="https://cstor.nn2.ru/forum/data/forum/images/2016-12/165588003-vstrecha_ng1-3.jpg" /></td>
-<td ><img src="https://idcollection.ru/upload/medialibrary/3fb/1.jpg" /></td>
-<td ><img src="https://d.radikal.ru/d10/1801/17/875e78655cda.jpg" /></td>
-</tr>
-<tr>
-<td ><img src="https://million-wallpapers.ru/wallpapers/2/34/313470668616218/novogodnee-nastroenie-vetki-eli-s-koricej.jpg" /></td>
-<td ><img src="https://proprikol.ru/wp-content/uploads/2019/11/krasivye-novogodnie-fotografii-38.jpg" /></td>
-<td ><img src="https://avatars.mds.yandex.net/i?id=fd1b324cc6caf4adfaf3bdfa8082a037-5236925-images-thumbs&n=13" /></td>
-</tr>
-<tr>
+    <div class="navbar">
+       
+      
+    </div>
+    <form name="RegForm" action="mailto:valetovaleksandr@mail.ru" enctype="text/plain" onsubmit="return MyFunc()" method="POST">
+        <p>Письмо Деду Морозу  <br>
+			Дорогой дед мороз,
+            <br><br> &nbsp;&nbsp;&nbsp; Меня зовут:
+            <a><input type="text" size="20" name="Name"></a>
+            <br><br><b> Я :</b>
+            <input type="radio" name="gender" value="boy">Мальчик
+            <input type="radio" name="gender" value="girl">Девочка
+            <br>
+            <br>В этом году я вел\вела себя
+            <input type="radio" name="opinion" value="good">хорошо
+            <input type="radio" name="opinion" value="very good">очень хорошо
+            <input type="radio" name="opinion" value="A teeny tiny but not so good">не очень хорошо
+            <br><br>На новый год я бы хотел получить
+            <br><br>&nbsp;
+            <a><input type="text" size="40" name="wish1"></a>
+            <br><br>&nbsp;
+            <a><input type="text" size="40" name="wish2"></a>
+            <br><br> и еще &nbsp;
+            <a><input type="text" size="40" name="wish3"></a>
 
-<td ><img src="https://www.sunhome.ru/i/wallpapers/128/yanvar-novii-god.xxl.jpg" /></td>
-<td ><img src="https://w-dog.ru/wallpapers/2/73/308052225584927/ogni-italiya-novyj-god-ulica-prazdnik-italia.jpg" /></td>
-<td ><img src="https://a-static.besthdwallpaper.com/rozhdestvo-v-gorode-oboi-2560x960-437_87.jpg" /></td>
-</tr>
-</table>
-<center>
+            <br><br><b>Я так же хотел рассказать тебе<br></b>
+            <b><textarea style="border:4px ridge rgb(230, 250, 49); border-radius:5px;" name="dlc" cols="40" rows="4"></textarea></b>
+            <br>
+            <b><input style="border:4px ridge rgb(230, 250, 49); border-radius:5px;" type="submit" value="Отправть"></b>
+        </p>
 
-</center>
+    </form>
+
 
 </body>
 <div class = "navbar">
@@ -150,16 +154,3 @@ else {document.images[index].style.border="1px solid green"; flag[index]=false;}
 <a href="gallery.html">ГАЛЕРЕЯ</a>
 </div>
 </html>
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
