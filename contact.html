@@ -1,0 +1,165 @@
+﻿Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@kucbyou 
+ValetovAA
+/
+finalsite
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+finalsite/gallery.html
+@ValetovAA
+ValetovAA final1
+Latest commit 520c52e 8 minutes ago
+ History
+ 1 contributor
+124 lines (115 sloc)  2.83 KB
+   
+<!doctype html>
+<html>
+<title>gallery</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<head>
+<meta charset = "UTF-8">
+
+<style>
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 5%;
+  width: 100%;
+  height:50 px;
+  background: rgba(0, 0, 0, 0.0); 
+}
+.NewYear{
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height:50 px;
+  background: rgba(0, 0, 0, 0.0); 
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 27px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+body { 
+   background-color: rgba(0, 0, 0, 0.9); 
+}
+
+img {
+display: block;
+margin: 10px;
+border: 1px solid green;
+padding: .5rem;
+border-radius: 1rem;
+box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+max-width: 20vw;
+}
+
+.styled-table img{
+width: 15vw;
+height: 10vw;
+}
+td{
+padding: 10px 2px 2px 5px ;
+}
+#demo {
+font-family: "Sofia", sans-serif;
+font-size: 30px;
+color: blue;
+}
+td[colspan="3"] {
+text-align: center;
+}
+</style>
+<script>
+var flag=new Array();
+window.onload = function() {
+for (var i = 0; i < document.images.length; i++) flag[i]=false;
+for (var i = 0; i < document.images.length; i++) {
+var image = document.images[i];
+image.setAttribute("index", i + "");
+image.onclick = function() {
+var index = this.getAttribute("index");
+if(!flag[index]) {document.images[index].style.border="2px solid red"; flag[index]=true;}
+else {document.images[index].style.border="1px solid green"; flag[index]=false;}
+};
+}
+};
+
+</script>
+</head>
+<body>
+<table class="styled-table" align="center">
+<tr>
+<td colspan="3">
+</td>
+</tr>
+<tr>
+<td ><img src="https://cstor.nn2.ru/forum/data/forum/images/2016-12/165588003-vstrecha_ng1-3.jpg" /></td>
+<td ><img src="https://idcollection.ru/upload/medialibrary/3fb/1.jpg" /></td>
+<td ><img src="https://d.radikal.ru/d10/1801/17/875e78655cda.jpg" /></td>
+</tr>
+<tr>
+<td ><img src="https://million-wallpapers.ru/wallpapers/2/34/313470668616218/novogodnee-nastroenie-vetki-eli-s-koricej.jpg" /></td>
+<td ><img src="https://proprikol.ru/wp-content/uploads/2019/11/krasivye-novogodnie-fotografii-38.jpg" /></td>
+<td ><img src="https://avatars.mds.yandex.net/i?id=fd1b324cc6caf4adfaf3bdfa8082a037-5236925-images-thumbs&n=13" /></td>
+</tr>
+<tr>
+
+<td ><img src="https://www.sunhome.ru/i/wallpapers/128/yanvar-novii-god.xxl.jpg" /></td>
+<td ><img src="https://w-dog.ru/wallpapers/2/73/308052225584927/ogni-italiya-novyj-god-ulica-prazdnik-italia.jpg" /></td>
+<td ><img src="https://a-static.besthdwallpaper.com/rozhdestvo-v-gorode-oboi-2560x960-437_87.jpg" /></td>
+</tr>
+</table>
+<center>
+
+</center>
+
+</body>
+<div class = "navbar">
+<a href ="main1.html">НОВЫЙ ГОД</a>
+<a href="contact.html">ПИСЬМО</a>
+<a href="gallery.html">ГАЛЕРЕЯ</a>
+</div>
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
