@@ -71,42 +71,7 @@ td[colspan="3"] {
 text-align: center;
 }
 </style>
-<script>
-var flag=new Array();
-window.onload = function() {
-for (var i = 0; i < document.images.length; i++) flag[i]=false;
-for (var i = 0; i < document.images.length; i++) {
-var image = document.images[i];
-image.setAttribute("index", i + "");
-image.onclick = function() {
-var index = this.getAttribute("index");
-if(!flag[index]) {document.images[index].style.border="2px solid red"; flag[index]=true;}
-else {document.images[index].style.border="1px solid green"; flag[index]=false;}
-};
-}
-};
-function randomImg() {
-myImages = new Array();
-myImages[0] =  <img width ="C:\Users\valet\Desktop\project\1.jpg">;
-myImages[1] = "images/santa2.jpg";
-myImages[2] = "images/santa3.jpg";
-myImages[3] = "images/santa4.jpg";
-myImages[4] = "images/santa5.jpg";
-myImages[5] = "images/santa6.jpg";
-myImages[6] = "images/santa7.jpg";
-myImages[7] = "images/santa8.jpg";
-myImages[8] = "images/santa9.jpg";
-myImages[9] = "images/santa9.jpg";
-//alert(document.images.length);
-//document.images[0].src="images/santa8.jpg";
-//document.images[1].src=myImages1[5];
-for (var i = 0; i < document.images.length; i++) {
-rnd = Math.floor( Math.random() * myImages.length );
-document.images[i].style.border="1px solid green";
-document.images[i].src=myImages[rnd];
-}
-}
-</script>
+
 </head>
 <body>
 <table class="styled-table" align="center">
